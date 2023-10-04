@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { apiUrl } from "../utils";
+import { formatTime } from "../utils";
 
 function ViewBlogsPreview ()  {
 
@@ -35,7 +36,8 @@ function ViewBlogsPreview ()  {
                     <div>{item.blog_picture}</div>
                     <div>{item.blog_title}</div>
                     <div>{item.author_name}</div>
-                    <div>{item.blog_publishdate}</div>
+                    <div>{formatTime(item.blog_publishdate)}</div>
+                    <br/>
                 </div>
 
             ))}

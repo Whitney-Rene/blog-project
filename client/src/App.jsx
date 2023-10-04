@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { apiUrl } from './utils';
 import './App.css';
 import ViewBlogsPreview from './components/ViewBlogsPreview';
-import { apiUrl } from './utils';
+import CreateBlogPost from './components/CreateBlogPost';
+
 
 function App() {
 
@@ -22,8 +24,10 @@ function App() {
     
     <ViewBlogsPreview />
 
+    <CreateBlogPost />
+
     <p>{note}</p>
-    
+
     </>
   )
 }

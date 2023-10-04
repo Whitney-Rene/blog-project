@@ -41,5 +41,13 @@ INSERT INTO blogpost (blog_title, blog_content, blog_picture, author_id) VALUES 
 
 INSERT INTO blogpost (blog_title, blog_content, blog_picture, author_id) VALUES ('Madrid', 'will fill in later', 'https://media.cntraveler.com/photos/5b2d15c98b842c3b35c5d3c7/1:1/w_2667,h_2667,c_limit/Madrid-Beaches_GettyImages-731843465.jpg', 1);
 
+--helpful statements
+UPDATE table_name
+SET column_name = new_value
+WHERE some_column = some_value;
+
+--inner join
+select blogpost.blog_picture, blogpost.blog_title, blogpost.blog_publishdate, authors.author_name FROM blogpost INNER JOIN authors on blogpost.author_id = authors.author_id;
+
 --quit postgres
 \q

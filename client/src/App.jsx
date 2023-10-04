@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-
-//a string?
-const apiUrl = 'http://localhost:1012';
+import ViewBlogsPreview from './components/ViewBlogsPreview';
+import { apiUrl } from './utils';
 
 function App() {
 
@@ -20,7 +19,11 @@ function App() {
 
   return (
     <>
+    
+    <ViewBlogsPreview />
+
     <p>{note}</p>
+    
     </>
   )
 }

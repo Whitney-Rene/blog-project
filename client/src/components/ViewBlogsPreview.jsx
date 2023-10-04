@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { apiUrl } from "../utils";
 import { formatTime } from "../utils";
+import '../App.css';
 
 function ViewBlogsPreview ()  {
 
@@ -27,13 +28,12 @@ function ViewBlogsPreview ()  {
 
     return (
         <>
-            <h1></h1>
 
             <div>
             {previewData.map((item) => (
                 
-            <div key={`${item.blog_id}-${item.author_id}`}>
-                    <div>{item.blog_picture}</div>
+            <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
+                    <img src={`${item.blog_picture}`} alt={`${item.blog_title}`} style={{ width: '100px', height: 'auto' }}/>
                     <div>{item.blog_title}</div>
                     <div>{item.author_name}</div>
                     <div>{formatTime(item.blog_publishdate)}</div>

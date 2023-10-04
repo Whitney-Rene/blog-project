@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-    <h1>{note}</h1>
+    <p>{note}</p>
     </>
   )
 }

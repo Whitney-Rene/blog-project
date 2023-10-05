@@ -35,7 +35,7 @@ function ViewBlogsPreview ()  {
             <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
                     <img src={`${item.blog_picture}`} alt={`${item.blog_title}`} style={{ width: '100px', height: 'auto' }}/>
                     <div>{item.blog_title}</div>
-                    <div>{item.author_name}</div>
+                    <div>by {item.author_name}</div>
                     <div>{formatTime(item.blog_publishdate)}</div>
                     <br/>
                 </div>

@@ -8,9 +8,21 @@ function CreateBlogPost () {
     const blogContent = useRef();
     const blogPicture = useRef();
 
-    const handlePostRequest = (data) => {
+    const handlePostRequest = async (data) => {
         try {
-            const response = await fetch 
+            const response = await fetch (`${apiUrl}/addblogpost`, {
+                method: 'POST', 
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            });
+            
+            if(!response.ok) {
+                throw new Error ('Failed to add new blogpost');
+            };
+
+            //rerender page with new content?
+        } catch (error) {
+            console.error('Error while adding blogpost', error);
         }
     };
 

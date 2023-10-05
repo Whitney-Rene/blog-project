@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { apiUrl } from '../utils';
 import '../App.css'
+import ViewBlogsPreview from './ViewBlogsPreview';
 
 function CreateBlogPost () {
 
@@ -21,6 +22,8 @@ function CreateBlogPost () {
             };
 
             //rerender page with new content?
+            //blogsPreviewData from ViewBlogsPreview.jsx
+
         } catch (error) {
             console.error('Error while adding blogpost', error);
         }

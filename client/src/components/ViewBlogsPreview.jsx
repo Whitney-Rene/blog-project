@@ -7,6 +7,7 @@ function ViewBlogsPreview ()  {
 
     const [previewData, setPreviewData] = useState([]);
 
+   //could I put this in the utils.js file?  so I can call it in CreateBlogPost?
     const blogsPreviewData = async () => {
         try {
             const response = await fetch(`${apiUrl}/blogpreview`);

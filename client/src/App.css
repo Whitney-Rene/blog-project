@@ -41,4 +41,12 @@
   color: #888;
 }
 
-/* need to add css, background color, shading behind photos, form, buttons */
+.blog-title:hover {
+  color: #004499; /* Change text color on hover */
+}
+
+/* !important is bad practice, however I couldn't figure out what css rule was taking precedence */
+.images {
+  width: 100px !important; 
+  height: auto !important; 
+}

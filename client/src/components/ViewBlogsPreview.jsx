@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { apiUrl } from "../utils";
 import { formatTime } from "../utils";
 import '../App.css';
+import ViewIndividualBlogModal from "./ViewIndividualBlogModal";
 
 function ViewBlogsPreview ()  {
 
     const [previewData, setPreviewData] = useState([]);
+    //all infor for a blog
 
    //could I put this in the utils.js file?  so I can call it in CreateBlogPost?
     const blogsPreviewData = async () => {
@@ -34,10 +36,12 @@ function ViewBlogsPreview ()  {
             {previewData.map((item) => (
                 
             <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
-                    <img src={`${item.blog_picture}`} alt={`${item.blog_title}`} style={{ width: '100px', height: 'auto' }}/>
-                    <div>{item.blog_title}</div>
+                    <img className="images" src={`${item.blog_picture}`} alt={`${item.blog_title}`}/>
+                    <br />
+                    <a href="#" className="blog-title" onClick=''>{item.blog_title}</a >
                     <div>by {item.author_name}</div>
                     <div>{formatTime(item.blog_publishdate)}</div>
+                    {/* {<ViewIndividualBlogModal prop=?/> } */}
                     <br/>
                 </div>
 

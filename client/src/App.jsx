@@ -27,11 +27,9 @@ function App() {
     
     <ViewBlogPreview />
 
-    <ViewEntireBlog />
-
     <CreateBlogPost />
 
-    <p>{note}</p>
+    <p>Note to self: {note}</p>
 
     </>
   )

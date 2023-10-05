@@ -58,13 +58,16 @@ function CreateBlogPost () {
 
             <label>Blog Title</label>
             <input type='text' name='title' required placeholder='title' ref={blogTitle}/>
+            <br />
 
             <label>Blog Content</label>
             <input type='text' name='content' required placeholder='content' ref={blogContent}/>
+            <br />
 
             <label>Blog Picture</label>
             <input type='text' name='photo' placeholder='url or jpg' ref={blogPicture}/>
-
+            <br />
+            
             <div className='space'>
                 <button  className='createButton' type='submit'>Create New Blog Post</button>
             </div>

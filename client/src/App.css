@@ -50,3 +50,71 @@
   width: 100px !important; 
   height: auto !important; 
 }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(241, 238, 231);
+  padding: 20px;
+  z-index: 1000;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family:monospace;
+  color: burlywood;
+  font-weight: bolder;
+
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px); /* Apply a blur effect */
+  z-index: 999; /* Should be below the modal */
+}
+
+label {
+  color: burlywood;
+  font-family:monospace;
+  
+}
+
+.formTitle, .createButton{
+  color: powderblue;
+  font-weight: bold;
+  font-family:monospace;
+}
+
+::placeholder {
+  font-family:monospace;
+  font-size: 11px;
+}
+
+.space {
+  margin-top: 15px;
+}
+
+.close {
+  background-color: powderblue;
+}
+
+.createButton {
+  background-color: whitesmoke; /* Button background color */
+  color: powderblue;; /* Button text color */
+  padding: 6px 12px; /* Padding for the button */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add a slight border radius */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+p, h4 {
+  font-family: monospace;
+  color: lightsalmon;
+}

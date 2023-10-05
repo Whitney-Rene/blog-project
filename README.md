@@ -22,7 +22,7 @@ If you are interested in installing and running this project on your local compu
 
 The project will look like this on the client side:
 
-<!-- ![Alt text](<Screenshot 2023-09-27 at 5.53.51 PM.png>) -->
+(<![Alt text](<Screenshot 2023-10-05 at 6.46.50 PM.png>)>)
 
 ### Developer Contact
 

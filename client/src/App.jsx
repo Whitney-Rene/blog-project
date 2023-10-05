@@ -3,6 +3,7 @@ import { apiUrl } from './utils';
 import './App.css';
 import ViewBlogsPreview from './components/ViewBlogsPreview';
 import CreateBlogPost from './components/CreateBlogPost';
+import ViewIndividualBlogModal from './components/ViewIndividualBlogModal';
 
 
 function App() {
@@ -21,8 +22,12 @@ function App() {
 
   return (
     <>
+
+    <h4>Whitney-Rene's Spain Blog</h4>
     
     <ViewBlogsPreview />
+
+    <ViewIndividualBlogModal />
 
     <CreateBlogPost />
 

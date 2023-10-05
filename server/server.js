@@ -37,6 +37,22 @@ app.get('/blogpreview', async (req, res) => {
     }
 });
 
+app.post('/addblogpost', async (req, res) => {
+    //I think I need to insert author first, but I only have one author
+    // CREATE TABLE blogpost (blog_id SERIAL PRIMARY KEY, blog_title VARCHAR (50) NOT NULL, blog_content TEXT NOT NULL, blog_publishdate DATE DEFAULT CURRENT_DATE, blog_picture TEXT, author_id INT REFERENCES authors(author_id));
+    try {
+        const { blog_title, blog_content, blog_picture } = req.body;
+        const result = await db.query(
+            'INSERT INTO blogpost (blog_title, blog_content, blog_picture, author_id) VALUES ($1, $2, $3, $4) RETURNING *',
+            [blog_title, blog_content, blog_picture, 1]
+            
+        );
+        res.status(201).json(result.rows[0]);
+    } catch (error) {
+        return res.status(400).json({error})
+    }
+})
+
 app.listen(PORT, () => {
     console.log(`Estoy escuchando en ${PORT}`)
 })

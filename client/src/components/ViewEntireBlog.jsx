@@ -1,19 +1,16 @@
 
-
 function ViewEntireBlog ({selectedData, closeModal}) {
-
-// user will click on icon and see modal with all info from blogpost table in postgres
-//will I need to call an instace of this component within another component?
-
-console.log(selectedData);
 
 return (
     <>
         <div className="backdrop"></div>
 
         <div className='modal'>
-        <p>{selectedData.blog_content}</p>
-        <button className='close' onClick={closeModal}>close</button>
+
+            <p>{selectedData.blog_content}</p>
+            <p>(This text above is coming from my blog_content column in my db.)</p>
+            <button className='close' onClick={closeModal}>close</button>
+
         </div>
 
     </>

@@ -3,7 +3,6 @@ import { apiUrl } from './utils';
 import './App.css';
 import ViewBlogPreview from './components/ViewBlogPreview';
 import CreateBlogPost from './components/CreateBlogPost';
-import ViewEntireBlog from './components/ViewEntireBlog';
 
 
 function App() {

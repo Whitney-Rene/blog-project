@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { apiUrl } from '../utils';
 import '../App.css'
-import ViewBlogPreview from './ViewBlogPreview';
 
 function CreateBlogPost () {
 
@@ -20,9 +19,6 @@ function CreateBlogPost () {
             if(!response.ok) {
                 throw new Error ('Failed to add new blogpost');
             };
-
-            //rerender page with new content?
-            //blogsPreviewData from ViewBlogsPreview.jsx
 
         } catch (error) {
             console.error('Error while adding blogpost', error);
@@ -67,7 +63,7 @@ function CreateBlogPost () {
             <label>Blog Picture</label>
             <input type='text' name='photo' placeholder='url or jpg' ref={blogPicture}/>
             <br />
-            
+
             <div className='space'>
                 <button  className='createButton' type='submit'>Create New Blog Post</button>
             </div>

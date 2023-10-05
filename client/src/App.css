@@ -9,7 +9,6 @@ body {
   background-color:blanchedalmond;
 }
 
-/* !important is bad practice, however I couldn't figure out what css rule was taking precedence */
 .images {
   width: 100px;
   height: auto; 
@@ -38,8 +37,8 @@ body {
   width: 100%;
   height: 100%;
   background:rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px); /* Apply a blur effect */
-  z-index: 999; /* Should be below the modal */
+  backdrop-filter: blur(5px); 
+  z-index: 999; 
 }
 
 label {
@@ -68,14 +67,14 @@ label {
 }
 
 .createButton {
-  background-color: whitesmoke; /* Button background color */
-  color: powderblue;; /* Button text color */
-  padding: 6px 12px; /* Padding for the button */
-  border: none; /* Remove the button border */
-  border-radius: 4px; /* Add a slight border radius */
-  font-size: 14px; /* Font size */
-  cursor: pointer; /* Cursor on hover */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+  background-color: whitesmoke; 
+  color: powderblue;; 
+  padding: 6px 12px; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 14px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 p, h4 {

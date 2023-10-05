@@ -5,8 +5,6 @@ import ReactModal from 'react-modal';
 import '../App.css';
 import ViewEntireBlog from "./ViewEntireBlog";
 
-// if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#root');
-
 function ViewBlogPreview ()  {
 
     const [previewData, setPreviewData] = useState([]);
@@ -23,7 +21,6 @@ function ViewBlogPreview ()  {
         setIsModalOpen(false);
     }
 
-   //could I put this in the utils.js file?  so I can call it in CreateBlogPost?
     const blogsPreviewData = async () => {
         try {
             const response = await fetch(`${apiUrl}/blogpreview`);
@@ -38,31 +35,34 @@ function ViewBlogPreview ()  {
         }
     }
 
+    //TODAY I LEARNED: 
+        //whatever is in the dependency array, if that changes, call function(s) in useEffect again
+        //if the dep array is empty, the function(s) will only run once on the intial render of the page
 
     useEffect (() => {
         blogsPreviewData();
-        //whatever is in the dependency array, if that changes, call function(s) in useEffect again
-        //if the dep array is empty, the function(s) will only run once on the intial render of the page
     }, [previewData]);
 
     return (
         <>
 
             <div>
-            {previewData.map((item) => (
-                
-                <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
 
-                    <img className="images" src={`${item.blog_picture}`} alt={`${item.blog_title}`}/>
-                    <br />
-                    <a href="#" className="blog-title" onClick={() => openModal(item)}>{item.blog_title}</a >
-                    <p>by {item.author_name}</p>
-                    <p>{formatTime(item.blog_publishdate)}</p>
-                    <br/>
+                {previewData.map((item) => (
+                    
+                    <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
 
-                </div>
+                        <img className="images" src={`${item.blog_picture}`} alt={`${item.blog_title}`}/>
+                        <br />
+                        <a href="#" className="blog-title" onClick={() => openModal(item)}>{item.blog_title}</a >
+                        <p>by {item.author_name}</p>
+                        <p>{formatTime(item.blog_publishdate)}</p>
+                        <br/>
 
-            ))}
+                    </div>
+
+                ))}
+
             </div>
 
             {isModalOpen && (

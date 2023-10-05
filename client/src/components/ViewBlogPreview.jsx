@@ -56,8 +56,8 @@ function ViewBlogPreview ()  {
                     <img className="images" src={`${item.blog_picture}`} alt={`${item.blog_title}`}/>
                     <br />
                     <a href="#" className="blog-title" onClick={() => openModal(item)}>{item.blog_title}</a >
-                    <div>by {item.author_name}</div>
-                    <div>{formatTime(item.blog_publishdate)}</div>
+                    <p>by {item.author_name}</p>
+                    <p>{formatTime(item.blog_publishdate)}</p>
                     <br/>
 
                 </div>

@@ -5,50 +5,14 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.blog-title:hover {
-  color: #004499; /* Change text color on hover */
+body {
+  background-color:blanchedalmond;
 }
 
 /* !important is bad practice, however I couldn't figure out what css rule was taking precedence */
 .images {
-  width: 100px !important; 
-  height: auto !important; 
+  width: 100px;
+  height: auto; 
 }
 
 .modal {
@@ -117,4 +81,14 @@ label {
 p, h4 {
   font-family: monospace;
   color: lightsalmon;
+}
+
+.blog-title {
+  color: powderblue;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.TITLE {
+  color: sandybrown;
 }

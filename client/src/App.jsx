@@ -23,7 +23,7 @@ function App() {
   return (
     <>
 
-    <h4>Whitney-Rene's Spain Blog</h4>
+    <h2 className='TITLE'>Whitney-Rene's Spain Blog</h2>
     
     <ViewBlogPreview />
 

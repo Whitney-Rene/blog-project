@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { apiUrl } from "../utils";
 import { formatTime } from "../utils";
 import '../App.css';
-import ViewIndividualBlogModal from "./ViewIndividualBlogModal";
+import ViewIndividualBlogModal from "./ViewEntireBlog";
 
-function ViewBlogsPreview ()  {
+function ViewBlogPreview ()  {
 
     const [previewData, setPreviewData] = useState([]);
     //all infor for a blog
@@ -52,4 +52,4 @@ function ViewBlogsPreview ()  {
     )
 };
 
-export default ViewBlogsPreview;
+export default ViewBlogPreview;

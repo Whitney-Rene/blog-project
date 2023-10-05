@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { apiUrl } from './utils';
 import './App.css';
-import ViewBlogsPreview from './components/ViewBlogsPreview';
+import ViewBlogPreview from './components/ViewBlogPreview';
 import CreateBlogPost from './components/CreateBlogPost';
-import ViewIndividualBlogModal from './components/ViewIndividualBlogModal';
+import ViewEntireBlog from './components/ViewEntireBlog';
 
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
 
     <h4>Whitney-Rene's Spain Blog</h4>
     
-    <ViewBlogsPreview />
+    <ViewBlogPreview />
 
-    <ViewIndividualBlogModal />
+    <ViewEntireBlog />
 
     <CreateBlogPost />
 

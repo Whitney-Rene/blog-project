@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { apiUrl } from '../utils';
 import '../App.css'
-import ViewBlogsPreview from './ViewBlogsPreview';
+import ViewBlogPreview from './ViewBlogPreview';
 
 function CreateBlogPost () {
 

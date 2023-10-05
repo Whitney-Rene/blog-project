@@ -22,15 +22,16 @@ function App() {
   return (
     <>
 
-    <h2 className='TITLE'>Whitney-Rene's Spain Blog</h2>
-    
-    <ViewBlogPreview />
+      <h2 className='TITLE'>Whitney-Rene's Spain Blog</h2>
+      
+      <ViewBlogPreview />
 
-    <CreateBlogPost />
+      <CreateBlogPost />
 
-    <p>Note to self: {note}</p>
+      <p>Note to self: {note}</p>
 
     </>
+    
   )
 }
 

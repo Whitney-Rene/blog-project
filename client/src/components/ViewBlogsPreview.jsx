@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { apiUrl } from "../utils";
 import { formatTime } from "../utils";
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import '../App.css';
 
 function ViewBlogsPreview ()  {
@@ -30,19 +31,29 @@ function ViewBlogsPreview ()  {
     return (
         <>
 
-            <div>
-            {previewData.map((item) => (
-                
-            <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
-                    <img src={`${item.blog_picture}`} alt={`${item.blog_title}`} style={{ width: '100px', height: 'auto' }}/>
-                    <div>{item.blog_title}</div>
-                    <div>by {item.author_name}</div>
-                    <div>{formatTime(item.blog_publishdate)}</div>
-                    <br/>
+        <ResponsiveMasonry
+            columnsCountBreakPoints={{900:4}}
+        >
+
+            <Masonry columnsCount={3} gutter="40px">
+
+                <div>
+                {previewData.map((item) => (
+                    
+                <div className="blogPreview" key={`${item.blog_id}-${item.author_id}`}>
+                        <img src={`${item.blog_picture}`} alt={`${item.blog_title}`} style={{ width: '100px', height: 'auto' }}/>
+                        <div>{item.blog_title}</div>
+                        <div>by {item.author_name}</div>
+                        <div>{formatTime(item.blog_publishdate)}</div>
+                        <br/>
+                    </div>
+
+                ))}
                 </div>
 
-            ))}
-            </div>
+                </Masonry>
+
+        </ResponsiveMasonry>
 
         </>
     )
